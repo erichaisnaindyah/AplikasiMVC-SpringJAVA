@@ -1,0 +1,103 @@
+NAMA		: Ericha Isnaindyah
+NIM		: G.231.15.00681
+
+
+TUGAS
+Pemrograman Framework Java
+
+BAB 6
+
+1.	Apasajakahvariabel / object yang dibuat?
+2.	Apasajakah package yang di buat?
+3.	Bagaimanakahalur logic programming nya? Manakah model nya? viewnya? dan Controller nya?
+
+JAWAB:
+
+1)	 Variable :
+-	Class : Hello world
+String : Massage
+
+-	Class : Car.java
+String :Brand, type, engine, transmission, fuel
+		
+-	Class : Vehicle.java
+String : Move
+
+	Objek :
+-	Helloworld
+
+
+2)	 Package 
+
+a.	SpringMvc01 : com.tobuku.controller
+b.	SpringMvc02 : com.tobuku.controller, com.tobuku.service, com.tobuku.service.impl
+3)	Alur Logic
+(1) request URL terjadi.
+(2) spring-servlet mengaktifkan bean-controller sesuaidengan mapping yang sudahdidefinisikan.
+(3) bean-controller ditemukan. Kemudianmengarahkanpadaduaalternatif :
+(3.1) Langsungke View Resolver. 
+(3.1.1) Membuka file fisik. Nama file sesuaidengannilaiproperti “viewName”, direktorinyasesuaidenganawalan (prefix )yangdidefinisikanpada bean viewResolver, sedangkanekstensi file tergantungpadaakhiran (suffix).
+(3.2) ke class-controller. Contoh : class=”com.tobuku.controller.”
+
+(3.2.1) kelasHelloworldberhasildieksekusidanmengembalikanobjekModelAndView. Selanjutnyaadaduakemungkinan.
+
+(3.2.1.1) Pertama, mengarahkanke model, yaitueksekusikepada bean yang didefinisikan di applicationContext.xml. Contoh : return new ModelAndView(“Helloworld”).
+
+(3.2.1.2) Kedua, mengarahkanke view, yaitueksekusikepada mapping URL yang didefinisikan di dispatcher-servlet.xml. Contoh : return new ModelAndView(new RedirectView(“/hello.html”)) Iniberartikembalike proses (2)
+Ket :
+applicationContext.xmladalah file xml application context pada Spring. Penamaan file inibisadiubah
+Model : hello
+Views :Welcome.jspdanindex.jsp .
+Controller : HelloWorld.java
+
+ 
+
+BAB 7
+
+1. Apasajakahvariabel / object yang dibuat?
+2. Apasajakah package yang di buat?
+3. Bagaimanakahalur logic programming nya? Manakah model nya? viewnya? dan Controller nya?
+	JAWAB :
+1)	Variabel	
+
+-	Class : VehicleController.java
+String :submitForm, LoadformPage
+
+-	Class : Vehicle.java
+String : Move
+
+-	Class : Supercar.java
+String :String : type, engine, transmission, fuel, motion .
+boolean : available.
+
+
+Objek :	
+
+-	VehicleController
+
+2) Package
+
+a.	SpringMvcform : com.tobuku.controller, com.tobuku.service, com.tobuku.service.impl
+
+4)	Alur Logic
+(1) request URL terjadi.
+(2) spring-servlet mengaktifkan bean-controller sesuaidengan mapping yang sudahdidefinisikan.
+(3) bean-controller ditemukan. Kemudianmengarahkanpadaduaalternatif :
+
+
+
+
+(3.1) Langsungke View Resolver. 
+(3.1.1) Membuka file fisik. Nama file sesuaidengannilaiproperti “viewName”, direktorinyasesuaidenganawalan (prefix )yangdidefinisikanpada bean viewResolver, sedangkanekstensi file tergantungpadaakhiran (suffix).
+(3.2) ke class-controller. Contoh : class=”com.tobuku.controller.”
+
+(3.2.1) kelasVehicleControllerberhasildieksekusidanmengembalikanobjekModelAndView. Selanjutnya
+
+(3.2.2) mengarahkanke view, yaitueksekusikepada mapping URL yang didefinisikan di spring-servlet.xml. 
+Ket :
+applicationContext.xmladalah file xml application context pada Spring. Penamaan file inibisadiubah
+Model : open-car
+Views :index.jsp .
+Controller :VehicleController.java
+
+
